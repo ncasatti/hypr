@@ -185,7 +185,10 @@
 	"window-rewrite": {
 		"class<VSCode|code-url-handler|code-oss|codium|codium-url-handler|VSCodium>": " ",
 		"class<cursor|cursor-url-handler>": " ",
+		"class<kitty|konsole>": " ",
+		"class<kitty-dropterm>": " ",
 		"class<Brave-browser(-beta|-dev|-nightly)>": "󰖟 ",
+		"class<zen>": "󰖟 ", //Zen Browser
 		"class<Anytype|anytype>": " ",
 		"class<TeamViewer>": "󰔀 ",
 
@@ -194,8 +197,6 @@
 		"title<.*reddit.*>": " ",
 		"title<.*Picture-in-Picture.*>": " ",
 		"class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": " ",
-		"class<kitty|konsole>": " ",
-		"class<kitty-dropterm>": " ",
 		"class<Chromium|Thorium>": " ",
 		"class<org.telegram.desktop|io.github.tdesktop_x64.TDesktop>": " ",
 		"class<[Ss]potify>": " ",
@@ -216,7 +217,6 @@
 		"class<com.obsproject.Studio>": " ",
 		"class<polkit-gnome-authentication-agent-1>": "󰒃 ",
 		"class<nwg-look>": " ",
-		"class<zen>": "󰰷 ", //Zen Browser
 		"class<waterfox|waterfox-bin>": " ",
 		"class<microsoft-edge>": " ",
 		"class<vlc>": "󰕼 ",
