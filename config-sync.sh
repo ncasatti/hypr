@@ -10,6 +10,7 @@ menu(){
   echo "=== $TITLE ==="
   echo "1. Rofi"
   echo "2. Waybar"
+  echo "3. Kitty"
   echo "0. Exit"
 }
 
@@ -55,6 +56,24 @@ waybar_config(){
   read -p "Done..."
 }
 
+# 3. Kitty
+kitty_config(){
+  sub_menu "Kitty"
+  read -p "Select an option: " option
+
+  case $option in
+    1)
+      rm -rf ./kitty
+      cp -r $CONFIG_DIR/kitty ./
+      ;;
+    2)
+      rm -rf $CONFIG_DIR/kitty
+      cp -r ./kitty $CONFIG_DIR/
+      ;;
+  esac
+  read -p "Done..."
+}
+
 main(){
   while true; do
       menu
@@ -66,6 +85,9 @@ main(){
               ;;
           2)
               waybar_config
+              ;;
+          3)
+              kitty_config
               ;;
           0)
               echo "Exiting..."
