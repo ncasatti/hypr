@@ -188,9 +188,11 @@
 		"class<kitty|konsole>": " ",
 		"class<kitty-dropterm>": " ",
 		"class<Brave-browser(-beta|-dev|-nightly)>": "󰖟 ",
-		"class<zen>": "󰖟 ", //Zen Browser
+		"class<zen>": " ",
 		"class<Anytype|anytype>": " ",
 		"class<TeamViewer>": "󰔀 ",
+		"class<[Ww]hats[Dd]esk>": " ",
+		"class<remmina>": " ",
 
 		"title<.*youtube.*>": " ",
 		"title<.*amazon.*>": " ",
