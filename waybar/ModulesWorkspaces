@@ -181,7 +181,7 @@
 	  },
 	"format": "{icon} {windows}",
 	"format-window-separator": " ",
-	"window-rewrite-default": " ",
+	"window-rewrite-default": "󰘔 ",
 	"window-rewrite": {
 		"class<VSCode|code-url-handler|code-oss|codium|codium-url-handler|VSCodium>": " ",
 		"class<cursor|cursor-url-handler>": " ",
@@ -192,7 +192,8 @@
 		"class<Anytype|anytype>": " ",
 		"class<TeamViewer>": "󰔀 ",
 		"class<[Ww]hats[Dd]esk>": " ",
-		"class<remmina>": " ",
+		"class<org.remmina.Remmina>": " ",
+		"class<tidal-hifi>": " ",
 
 		"title<.*youtube.*>": " ",
 		"title<.*amazon.*>": " ",
