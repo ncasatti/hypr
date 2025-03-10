@@ -20,7 +20,7 @@ configuration {
   bg3    : black;
   fg0    : #ffffff;
   fg1    : #cecece;
-  accent : #60cdff;
+  accent : #2C3279;
   urgent : @accent;
 
   background-color : @bg2;
@@ -112,9 +112,14 @@ element selected active {
 
 element-text selected,
 element selected {
-  background-color: @bg3;
+  // background-color: @accent;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 0px;
+}
+
+element selected {
+  border-color: @accent;
+  border: 1px;
 }
 
 element selected urgent {

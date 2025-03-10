@@ -10,20 +10,15 @@ iDIR="$HOME/.config/swaync/icons"
 
 # Online Stations. Edit as required
 declare -A online_music=(
-  ["Lofi Girl Radio ☕️🎶"]="https://play.streamafrica.net/lofiradio"
   ["FM - Easy Rock 96.3 📻🎶"]="https://radio-stations-philippines.com/easy-rock"
-  ["FM - WRock - CEBU 96.3 📻🎶"]="https://onlineradio.ph/126-96-3-wrock.html"
-  ["YT - Wish 107.5 YT Pinoy HipHop 🎻🎶"]="https://youtube.com/playlist?list=PLkrzfEDjeYJnmgMYwCKid4XIFqUKBVWEs&si=vahW_noh4UDJ5d37"
-  ["YT - Top Youtube Music 2023 ☕️🎶"]="https://youtube.com/playlist?list=PLDIoUOhQQPlXr63I_vwF9GD8sAKh77dWU&si=y7qNeEVFNgA-XxKy"
-  ["YT - Wish 107.5 YT Wishclusives ☕️🎶"]="https://youtube.com/playlist?list=PLkrzfEDjeYJn5B22H9HOWP3Kxxs-DkPSM&si=d_Ld2OKhGvpH48WO"
-  ["Chillhop Radio ☕️🎶"]="http://stream.zeno.fm/fyn8eh3h5f8uv"
-  ["FM - Fresh Philippines ☕️🎶"]="https://onlineradio.ph/553-fresh-fm.html"
+  ["FM - Chillhop Radio ☕️🎶"]="http://stream.zeno.fm/fyn8eh3h5f8uv"
+  ["FM - Shopping Classics 96.1 📻🎶"]="https://stream4.suenas.net/shoppingclassics"
+  ["FM - Aspen 93.7 📻🎶"]="https://sslstream.online:7001/stream"
   ["YT - Relaxing Music ☕️🎶"]="https://youtube.com/playlist?list=PLMIbmfP_9vb8BCxRoraJpoo4q1yMFg4CE"
   ["YT - Youtube Remix 📻🎶"]="https://youtube.com/playlist?list=PLeqTkIUlrZXlSNn3tcXAa-zbo95j0iN-0"
-  ["YT - Korean Drama OST 📻🎶"]="https://youtube.com/playlist?list=PLUge_o9AIFp4HuA-A3e3ZqENh63LuRRlQ"
-  ["YT - AfroBeatz 2024 🎧"]="https://www.youtube.com/watch?v=7uB-Eh9XVZQ"
-  ["Shopping Classics 96.1 📻🎶"]="https://stream4.suenas.net/shoppingclassics"
-  ["Aspen 93.7 📻🎶"]="https://sslstream.online:7001/stream"
+  ["YT - RetroWave Radio 🎧 - ThePrimeThanatos"]="https://youtu.be/SwhsegXolTs"
+  ["YT - Lofi Girl Radio ☕️🎶"]="https://youtu.be/4xDzrJKXOOY"
+  ["PL - Lo-Fi Rock 🎧"]="https://youtube.com/playlist?list=PLL3BWakT7rqX3at7Sot-9ZynNqK9LBThu&si=hRm9XKdjl3BwsjuY"
 )
 
 # Populate local_music array with files from music directory and subdirectories
@@ -46,7 +41,7 @@ play_local_music() {
   populate_local_music
 
   # Prompt the user to select a song
-  choice=$(printf "%s\n" "${filenames[@]}" | rofi -i -dmenu -config ~/.config/rofi/config-rofi-Beats.rasi -p "Local Music")
+  choice=$(printf "%s\n" "${filenames[@]}" | sort | rofi -i -dmenu -config ~/.config/rofi/config-rofi-Beats.rasi -p "Local Music")
 
   if [ -z "$choice" ]; then
     exit 1
@@ -85,7 +80,7 @@ play_online_music() {
   link="${online_music[$choice]}"
 
   notification "$choice"
-  
+
   # Play the selected online music using mpv
   mpv --shuffle --vid=no "$link"
 }
