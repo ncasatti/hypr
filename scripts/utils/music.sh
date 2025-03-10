@@ -22,6 +22,8 @@ declare -A online_music=(
   ["YT - Youtube Remix 📻🎶"]="https://youtube.com/playlist?list=PLeqTkIUlrZXlSNn3tcXAa-zbo95j0iN-0"
   ["YT - Korean Drama OST 📻🎶"]="https://youtube.com/playlist?list=PLUge_o9AIFp4HuA-A3e3ZqENh63LuRRlQ"
   ["YT - AfroBeatz 2024 🎧"]="https://www.youtube.com/watch?v=7uB-Eh9XVZQ"
+  ["Shopping Classics 96.1 📻🎶"]="https://stream4.suenas.net/shoppingclassics"
+  ["Aspen 93.7 📻🎶"]="https://sslstream.online:7001/stream"
 )
 
 # Populate local_music array with files from music directory and subdirectories
