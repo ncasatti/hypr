@@ -34,6 +34,7 @@ ags -q
 # Relaunching rainbow borders if the script exists
 sleep 1
 if file_exists "${SCRIPTSDIR}/theme/rainbow-borders.sh"; then
+    echo "Rainbow borders script found"
     ${SCRIPTSDIR}/theme/rainbow-borders.sh &
 fi
 
