@@ -2,6 +2,8 @@
 /* KooL Hyprland Rofi Style 11 - Windows 11 List Dark */
 /* source: https://github.com/newmanls */
 
+@import "~/.config/rofi/wallust/colors-rofi.rasi"
+
 /* Integrating Wallust and More tweaks */
 
 /* ---- Configuration ---- */
@@ -20,7 +22,8 @@ configuration {
   bg3    : black;
   fg0    : #ffffff;
   fg1    : #cecece;
-  accent : #2C3279;
+  /* accent : #2C3279; */
+  accent : @color2;
   urgent : @accent;
 
   background-color : @bg2;
@@ -120,7 +123,7 @@ element selected {
 
 element selected {
   border-color: @accent;
-  border: 1px;
+  border: 2px;
 }
 
 element selected urgent {
