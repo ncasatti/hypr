@@ -33,10 +33,11 @@ configuration {
 
 /*****-- Elements Font Size -----*****/
 element-text {
-  font: "JetBrainsMono Nerd Font SemiBold 11";
+  font: "Roboto 10";
 }
 
 element-icon, element-text, scrollbar {
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -92,6 +93,7 @@ element {
   spacing       : 1em;
   padding       : 20px;
   border-radius : 2px;
+  background-color: @bg1;
 }
 
 element normal urgent {
@@ -112,7 +114,6 @@ element selected active {
 
 element-text selected,
 element selected {
-  // background-color: @accent;
   padding: 20px;
   border-radius: 0px;
 }
@@ -132,6 +133,7 @@ element-icon {
 
 element-text {
   text-color: inherit;
+  background-color: transparent;
 }
 
 /* ---- Scrollbar ---- */

@@ -5,7 +5,7 @@
 echo Select random wallpaper script
 
 wallpaper_dir="$HOME/Pictures/wallpapers"
-scripts_dir="$HOME/.config/hypr/new-scripts"
+scripts_dir="$HOME/.config/hypr/scripts"
 focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
 
 echo $focused_monitor
@@ -28,7 +28,7 @@ swww img -o $focused_monitor $RANDOMPIC $SWWW_PARAMS
 
 wallust run $RANDOMPIC -s &
 
-# ${scripts_dir}/wallpaper-colors.sh
+${scripts_dir}/theme/wallpaper-colors.sh
 # sleep 1
-${scripts_dir}/refresh-no-waybar.sh 
+${scripts_dir}/settings/refresh-no-waybar.sh 
 

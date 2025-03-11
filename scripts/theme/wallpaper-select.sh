@@ -5,14 +5,13 @@
 # WALLPAPERS PATH
 wallDIR="$HOME/Pictures/wallpapers"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
-NEW_SCRIPTS="$HOME/.config/hypr/new-scripts"
 
 # variables
 focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
 # swww transition config
 FPS=144
 TYPE="any"
-DURATION=2
+DURATION=1
 BEZIER=".43,1.19,1,.4"
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
 
@@ -71,9 +70,9 @@ main() {
   if [[ "$choice" == "$RANDOM_PIC_NAME" ]]; then
     swww img -o "$focused_monitor" "$RANDOM_PIC" $SWWW_PARAMS
     sleep 0.5
-    "$NEW_SCRIPTS/wallpaper-colors.sh"
+    "$SCRIPTSDIR/theme/wallpaper-colors.sh"
     sleep 0.2
-    "$NEW_SCRIPTS/refresh-no-waybar.sh"
+    "$SCRIPTSDIR/settings/refresh-no-waybar.sh"
     exit 0
   fi
 
@@ -104,7 +103,7 @@ fi
 main
 
 sleep 0.5
-"$NEW_SCRIPTS/wallpaper-colors.sh"
+"$SCRIPTSDIR/theme/wallpaper-colors.sh"
 
 sleep 0.2
-"$NEW_SCRIPTS/refresh-no-waybar.sh"
+"$SCRIPTSDIR/settings/refresh-no-waybar.sh"

@@ -7,7 +7,6 @@
 
 SCRIPTSDIR=$HOME/.config/hypr/scripts
 USER_SCRIPTS=$HOME/.config/hypr/UserScripts
-NEW_SCRIPTS=$HOME/.config/hypr/new-scripts
 
 # Define file_exists function
 file_exists() {
@@ -34,9 +33,10 @@ ags -q
 
 # Relaunching rainbow borders if the script exists
 sleep 1
-if file_exists "${NEW_SCRIPTS}/RainbowBorders.sh"; then
-    ${NEW_SCRIPTS}/RainbowBorders.sh &
+if file_exists "${SCRIPTSDIR}/theme/rainbow-borders.sh"; then
+    ${SCRIPTSDIR}/theme/rainbow-borders.sh &
 fi
 
+hyprshade toggle vibrance
 
 exit 0

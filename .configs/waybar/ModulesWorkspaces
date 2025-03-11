@@ -178,7 +178,7 @@
 	"on-scroll-down": "hyprctl dispatch workspace e-1",
 	"persistent-workspaces": {
 		"*": 5
-	  },
+		},
 	"format": "{icon} {windows}",
 	"format-window-separator": " ",
 	"window-rewrite-default": "󰘔 ",
@@ -226,7 +226,6 @@
 		"class<microsoft-edge>": " ",
 		"class<vlc>": "󰕼 ",
 		"class<steam>": " "
-		}   
+		}
 	}
-
 }
