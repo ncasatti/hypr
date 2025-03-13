@@ -31,7 +31,6 @@ ags -q
 # ${SCRIPTSDIR}/WallustSwww.sh &
 
 # Relaunching rainbow borders if the script exists
-sleep 1
 if file_exists "${SCRIPTSDIR}/theme/rainbow-borders.sh"; then
     ${SCRIPTSDIR}/theme/rainbow-borders.sh &
 fi

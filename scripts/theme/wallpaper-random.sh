@@ -18,7 +18,7 @@ echo $RANDOMPIC
 # Transition config
 FPS=144
 TYPE="random"
-DURATION=1
+DURATION=0.8
 BEZIER=".43,1.19,1,.4"
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
 
@@ -29,6 +29,5 @@ swww img -o $focused_monitor $RANDOMPIC $SWWW_PARAMS
 wallust run $RANDOMPIC -s &
 
 ${scripts_dir}/theme/wallpaper-colors.sh
-# sleep 1
 ${scripts_dir}/settings/refresh-no-waybar.sh 
 

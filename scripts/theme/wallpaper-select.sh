@@ -11,7 +11,7 @@ focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{pri
 # swww transition config
 FPS=144
 TYPE="any"
-DURATION=1
+DURATION=0.8
 BEZIER=".43,1.19,1,.4"
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
 
@@ -69,9 +69,7 @@ main() {
   # Random choice case
   if [[ "$choice" == "$RANDOM_PIC_NAME" ]]; then
     swww img -o "$focused_monitor" "$RANDOM_PIC" $SWWW_PARAMS
-    sleep 0.5
     "$SCRIPTSDIR/theme/wallpaper-colors.sh"
-    sleep 0.2
     "$SCRIPTSDIR/settings/refresh-no-waybar.sh"
     exit 0
   fi
@@ -102,8 +100,6 @@ fi
 
 main
 
-sleep 0.5
 "$SCRIPTSDIR/theme/wallpaper-colors.sh"
 
-sleep 0.2
 "$SCRIPTSDIR/settings/refresh-no-waybar.sh"

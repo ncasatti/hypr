@@ -13,7 +13,7 @@ menu() {
   echo "2. Waybar"
   echo "3. Kitty"
   echo "4. Wallust"
-  echo "5. GTK Themes"
+  echo "5. Themes"
   echo "6. Hyprshade"
   echo "0. Exit"
 }
@@ -43,7 +43,7 @@ main() {
       wallust_config
       ;;
     5)
-      gtk_themes
+      themes
       ;;
     6)
       hyprshade_config
@@ -132,9 +132,9 @@ wallust_config() {
   read -p "Done..."
 }
 
-# 5. GTK Themes
-gtk_themes() {
-  sub_menu "GTK Themes"
+# 5. Themes
+themes() {
+  sub_menu "Themes"
   read -p "Select an option: " option
 
   case $option in
@@ -148,6 +148,9 @@ gtk_themes() {
     # GTK 4
     rm -rf $EXTERNAL_CONFIGS/gtk-4.0
     cp -r $CONFIG_DIR/gtk-4.0 $EXTERNAL_CONFIGS/
+    # Kvantum
+    rm -rf $EXTERNAL_CONFIGS/Kvantum
+    cp -r $CONFIG_DIR/Kvantum $EXTERNAL_CONFIGS/
     ;;
   2)
     # GTK 2
@@ -159,6 +162,9 @@ gtk_themes() {
     # GTK 4
     rm -rf $CONFIG_DIR/gtk-4.0
     cp -r $EXTERNAL_CONFIGS/gtk-4.0 $CONFIG_DIR/
+    # Kvantum
+    rm -rf $CONFIG_DIR/Kvantum
+    cp -r $EXTERNAL_CONFIGS/Kvantum $CONFIG_DIR/
     ;;
   esac
   read -p "Done..."
