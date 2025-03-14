@@ -181,7 +181,7 @@ hyprshade_config() {
     sudo cp -r /usr/share/hyprshade $EXTERNAL_CONFIGS/
     ;;
   2)
-    rm -rf /usr/share/hyprshade
+    sudo rm -rf /usr/share/hyprshade
     sudo cp -r $EXTERNAL_CONFIGS/hyprshade /usr/share/
     ;;
   esac
