@@ -14,6 +14,7 @@ declare -A online_music=(
   ["FM - Chillhop Radio ☕️🎶"]="http://stream.zeno.fm/fyn8eh3h5f8uv"
   ["FM - Shopping Classics 96.1 📻🎶"]="https://stream4.suenas.net/shoppingclassics"
   ["FM - Aspen 93.7 📻🎶"]="https://sslstream.online:7001/stream"
+  ["FM - Rock And Pop 95.9 📻🎶"]="https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOPAAC_SC"
   ["YT - Relaxing Music ☕️🎶"]="https://youtube.com/playlist?list=PLMIbmfP_9vb8BCxRoraJpoo4q1yMFg4CE"
   ["YT - Youtube Remix 📻🎶"]="https://youtube.com/playlist?list=PLeqTkIUlrZXlSNn3tcXAa-zbo95j0iN-0"
   ["YT - RetroWave Radio 🎧 - ThePrimeThanatos"]="https://youtu.be/SwhsegXolTs"
