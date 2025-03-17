@@ -15,6 +15,7 @@ menu() {
   echo "4. Wallust"
   echo "5. Themes"
   echo "6. Hyprshade"
+  echo "7. Keyd"
   echo "0. Exit"
 }
 
@@ -47,6 +48,9 @@ main() {
       ;;
     6)
       hyprshade_config
+      ;;
+    7)
+      keyd_config
       ;;
     0)
       echo "Exiting..."
@@ -183,6 +187,24 @@ hyprshade_config() {
   2)
     sudo rm -rf /usr/share/hyprshade
     sudo cp -r $EXTERNAL_CONFIGS/hyprshade /usr/share/
+    ;;
+  esac
+  read -p "Done..."
+}
+
+# 7. Keyd
+keyd_config() {
+  sub_menu "Keyd"
+  read -p "Select an option: " option
+
+  case $option in
+  1)
+    rm -rf $EXTERNAL_CONFIGS/keyd
+    sudo cp -r /etc/keyd $EXTERNAL_CONFIGS/
+    ;;
+  2)
+    sudo rm -rf /etc/keyd
+    sudo cp -r $EXTERNAL_CONFIGS/keyd /etc/
     ;;
   esac
   read -p "Done..."
