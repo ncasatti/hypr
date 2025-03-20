@@ -27,5 +27,5 @@ C9=$(hex_to_0x $COLOR9)
 # hyprctl keyword general:col.inactive_border $(random_hex) $(random_hex) $(random_hex) $(random_hex) $(random_hex) $(random_hex) $(random_hex) $(random_hex) $(random_hex) $(random_hex)  270deg
 
 # Wallpaper Colors Border
-hyprctl keyword general:col.active_border $C0 $C1 $C2 $C3 $C4 $C5 $C6 $C7 $C8 $C9 270deg
+hyprctl keyword general:col.active_border $C0 $C1 $C2 $C3 $C4 $C5 $C6 $C7 $C8 $C9 0deg
 # hyprctl keyword general:col.inactive_border $C0 $C1 $C2 $C3 $C4 $C5 $C6 $C7 $C8 $C9 270deg
