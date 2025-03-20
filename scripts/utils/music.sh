@@ -19,6 +19,7 @@ declare -A online_music=(
   ["YT - Youtube Remix 📻🎶"]="https://youtube.com/playlist?list=PLeqTkIUlrZXlSNn3tcXAa-zbo95j0iN-0"
   ["YT - RetroWave Radio 🎧 - ThePrimeThanatos"]="https://youtu.be/SwhsegXolTs"
   ["YT - Lofi Girl Radio ☕️🎶"]="https://youtu.be/4xDzrJKXOOY"
+  ["YT - Synthwave Radio 🎧"]="https://youtu.be/W-1azuktk9U"
   ["PL - Lo-Fi Rock 🎧"]="https://youtube.com/playlist?list=PLL3BWakT7rqX3at7Sot-9ZynNqK9LBThu&si=hRm9XKdjl3BwsjuY"
 )
 
@@ -49,13 +50,13 @@ play_local_music() {
   fi
 
   # Find the corresponding file path based on user's choice and set that to play the song then continue on the list
-  for (( i=0; i<"${#filenames[@]}"; ++i )); do
+  for ((i = 0; i < "${#filenames[@]}"; ++i)); do
     if [ "${filenames[$i]}" = "$choice" ]; then
-		
-	    notification "$choice"
+
+      notification "$choice"
 
       # Play the selected local music file using mpv
-      mpv --playlist-start="$i" --loop-playlist --vid=no  "${local_music[@]}"
+      mpv --playlist-start="$i" --loop-playlist --vid=no "${local_music[@]}"
 
       break
     fi
@@ -72,7 +73,7 @@ shuffle_local_music() {
 
 # Main function for playing online music
 play_online_music() {
-  choice=$(printf "%s\n" "${!online_music[@]}" | rofi -i -dmenu -config ~/.config/rofi/config-rofi-Beats.rasi -p "Online Music")
+  choice=$(printf "%s\n" "${!online_music[@]}" | sort | rofi -i -dmenu -config ~/.config/rofi/config-rofi-Beats.rasi -p "Online Music")
 
   if [ -z "$choice" ]; then
     exit 1
@@ -89,21 +90,21 @@ play_online_music() {
 # Check if an online music process is running and send a notification, otherwise run the main function
 pkill mpv && notify-send -u low -i "$iDIR/music.png" "Music stopped" || {
 
-# Prompt the user to choose between local and online music
-user_choice=$(printf "Play from Online Stations\nPlay from Music Folder\nShuffle Play from Music Folder" | rofi -dmenu -config ~/.config/rofi/config-rofi-Beats-menu.rasi -p "Select music source")
+  # Prompt the user to choose between local and online music
+  user_choice=$(printf "Play from Online Stations\nPlay from Music Folder\nShuffle Play from Music Folder" | rofi -dmenu -config ~/.config/rofi/config-rofi-Beats-menu.rasi -p "Select music source")
 
   case "$user_choice" in
-    "Play from Music Folder")
-      play_local_music
-      ;;
-    "Play from Online Stations")
-      play_online_music
-      ;;
-    "Shuffle Play from Music Folder")
-      shuffle_local_music
-      ;;
-    *)
-      echo "Invalid choice"
-      ;;
+  "Play from Music Folder")
+    play_local_music
+    ;;
+  "Play from Online Stations")
+    play_online_music
+    ;;
+  "Shuffle Play from Music Folder")
+    shuffle_local_music
+    ;;
+  *)
+    echo "Invalid choice"
+    ;;
   esac
 }
