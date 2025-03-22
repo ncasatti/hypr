@@ -70,7 +70,7 @@ main() {
   if [[ "$choice" == "$RANDOM_PIC_NAME" ]]; then
     swww img -o "$focused_monitor" "$RANDOM_PIC" $SWWW_PARAMS
     "$SCRIPTSDIR/theme/wallpaper-colors.sh"
-    "$SCRIPTSDIR/settings/refresh-no-waybar.sh"
+    "$SCRIPTSDIR/settings/refresh.sh"
     exit 0
   fi
 
@@ -102,4 +102,4 @@ main
 
 "$SCRIPTSDIR/theme/wallpaper-colors.sh"
 
-"$SCRIPTSDIR/settings/refresh-no-waybar.sh"
+"$SCRIPTSDIR/settings/refresh.sh"
