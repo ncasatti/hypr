@@ -2,8 +2,8 @@
 
 # Variables
 TITLE="KDE CONFIGURATOR"
-CONFIG_DIR="$HOME/.config"
-EXTERNAL_CONFIGS="$HOME/.config/hypr/.configs"
+HOME_CONFIG="$HOME/.config"
+CONFIG="$HOME/.config/hypr/.configs"
 
 # Menu
 menu() {
@@ -85,10 +85,10 @@ sync_by_date() {
   local latest=$(get_latest_modification "$source" "$dest")
   local modified_files=($(get_modified_files "$source" "$dest"))
 
-  if [ ${#modified_files[@]} -gt 0 ]; then
-    echo "Modified files:"
-    printf '  - %s\n' "${modified_files[@]}"
-  fi
+  # if [ ${#modified_files[@]} -gt 0 ]; then
+  #   echo "Modified files:"
+  #   printf '  - %s\n' "${modified_files[@]}"
+  # fi
 
   if [ "$latest" = "1" ]; then
     echo "$name: System config is newer, copying to external configs..."
@@ -117,28 +117,33 @@ sync_all() {
   echo
 
   # Rofi
-  sync_by_date "$CONFIG_DIR/rofi" "$EXTERNAL_CONFIGS/rofi" "Rofi"
+  sync_by_date "$HOME_CONFIG/rofi" "$CONFIG/rofi" "Rofi"
 
   # Waybar
-  sync_by_date "$CONFIG_DIR/waybar" "$EXTERNAL_CONFIGS/waybar" "Waybar"
+  sync_by_date "$HOME_CONFIG/waybar" "$CONFIG/waybar" "Waybar"
 
   # Kitty
-  sync_by_date "$CONFIG_DIR/kitty" "$EXTERNAL_CONFIGS/kitty" "Kitty"
+  sync_by_date "$HOME_CONFIG/kitty" "$CONFIG/kitty" "Kitty"
 
   # Wallust
-  sync_by_date "$CONFIG_DIR/wallust" "$EXTERNAL_CONFIGS/wallust" "Wallust"
+  sync_by_date "$HOME_CONFIG/wallust" "$CONFIG/wallust" "Wallust"
 
   # Themes
-  sync_by_date "$CONFIG_DIR/gtk-2.0" "$EXTERNAL_CONFIGS/gtk-2.0" "GTK 2.0"
-  sync_by_date "$CONFIG_DIR/gtk-3.0" "$EXTERNAL_CONFIGS/gtk-3.0" "GTK 3.0"
-  sync_by_date "$CONFIG_DIR/gtk-4.0" "$EXTERNAL_CONFIGS/gtk-4.0" "GTK 4.0"
-  sync_by_date "$CONFIG_DIR/Kvantum" "$EXTERNAL_CONFIGS/Kvantum" "Kvantum"
+  sync_by_date "$HOME_CONFIG/gtk-2.0" "$CONFIG/gtk-2.0" "GTK 2.0"
+  sync_by_date "$HOME_CONFIG/gtk-3.0" "$CONFIG/gtk-3.0" "GTK 3.0"
+  sync_by_date "$HOME_CONFIG/gtk-4.0" "$CONFIG/gtk-4.0" "GTK 4.0"
+  sync_by_date "$HOME_CONFIG/Kvantum" "$CONFIG/Kvantum" "Kvantum"
 
   # Hyprshade
-  sync_by_date "/usr/share/hyprshade" "$EXTERNAL_CONFIGS/hyprshade" "Hyprshade"
+  sync_by_date "/usr/share/hyprshade" "$CONFIG/hyprshade" "Hyprshade"
 
   # Keyd
-  sync_by_date "/etc/keyd" "$EXTERNAL_CONFIGS/keyd" "Keyd"
+  sync_by_date "/etc/keyd" "$CONFIG/keyd" "Keyd"
+
+  # zsh
+  sync_by_date "~/.oh-my-zsh/custom/plugins" "$CONFIG/zsh/plugins" "Zsh Plugins"
+  sync_by_date "~/.oh-my-zsh/custom/themes" "$CONFIG/zsh/themes"  "Zsh Themes"
+  sync_by_date "~/.zshrc" "$CONFIG/zsh" "Zsh"
 
   read -p "Done. Press Enter to continue..."
 }

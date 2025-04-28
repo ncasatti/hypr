@@ -8,10 +8,10 @@ scripts="$HOME/.config/hypr/new-scripts"
 STATE=$(hyprctl -j getoption decoration:blur:size | jq ".int")
 
 if [ "${STATE}" == "5" ]; then
-	hyprctl keyword decoration:blur:size 3
+	hyprctl keyword decoration:blur:size 2
 	hyprctl keyword decoration:blur:passes 2
-  notify-send -e -u low -i "$notif" "Blur: 3"
-elif [ "${STATE}" == "3" ]; then
+  notify-send -e -u low -i "$notif" "Blur: 2"
+elif [ "${STATE}" == "2" ]; then
 	hyprctl keyword decoration:blur:size 6
 	hyprctl keyword decoration:blur:passes 3
   notify-send -e -u low -i "$notif" "Blur: 6"
