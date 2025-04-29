@@ -10,17 +10,20 @@ iDIR="$HOME/.config/swaync/icons"
 
 # Online Stations. Edit as required
 declare -A online_music=(
-  ["FM - Easy Rock 96.3 📻🎶"]="https://radio-stations-philippines.com/easy-rock"
-  ["FM - Chillhop Radio ☕️🎶"]="http://stream.zeno.fm/fyn8eh3h5f8uv"
-  ["FM - Shopping Classics 96.1 📻🎶"]="https://stream4.suenas.net/shoppingclassics"
-  ["FM - Aspen 93.7 📻🎶"]="https://sslstream.online:7001/stream"
-  ["FM - Rock And Pop 95.9 📻🎶"]="https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOPAAC_SC"
-  ["YT - Relaxing Music ☕️🎶"]="https://youtube.com/playlist?list=PLMIbmfP_9vb8BCxRoraJpoo4q1yMFg4CE"
-  ["YT - Youtube Remix 📻🎶"]="https://youtube.com/playlist?list=PLeqTkIUlrZXlSNn3tcXAa-zbo95j0iN-0"
-  ["YT - RetroWave Radio 🎧 - ThePrimeThanatos"]="https://youtu.be/SwhsegXolTs"
-  ["YT - Lofi Girl Radio ☕️🎶"]="https://youtu.be/4xDzrJKXOOY"
-  ["YT - Synthwave Radio 🎧"]="https://youtu.be/W-1azuktk9U"
-  ["PL - Lo-Fi Rock 🎧"]="https://youtube.com/playlist?list=PLL3BWakT7rqX3at7Sot-9ZynNqK9LBThu&si=hRm9XKdjl3BwsjuY"
+  ["Radio 📻 | Easy Rock 96.3"]="https://radio-stations-philippines.com/easy-rock"
+  ["Radio 📻 | Shopping Classics 96.1"]="https://stream4.suenas.net/shoppingclassics"
+  ["Radio 📻 | Aspen 93.7"]="https://sslstream.online:7001/stream"
+  ["Radio 📻 | Rock And Pop 95.9"]="https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOPAAC_SC"
+  ["Youtube Radio 🎧 | RetroWave Radio - ThePrimeThanatos"]="https://youtu.be/niif4go9sxE"
+  ["Youtube Radio 🎧 | Synthwave Radio - Lofi Girl"]="https://youtu.be/4xDzrJKXOOY"
+  ["Youtube Radio 🎧 | Synthwave and Chillwave Radio"]="https://youtu.be/W-1azuktk9U"
+  ["Youtube Playlist 🎶 | RetroWave"]="https://youtube.com/playlist?list=PLL3BWakT7rqX86diD3PgBkY1cBncKFfnT&si=scxgSiiUk-DJsvRa"
+  ["Youtube Playlist 🎶 | Remixes Playlist"]="https://youtube.com/playlist?list=PLeqTkIUlrZXlSNn3tcXAa-zbo95j0iN-0"
+  ["Youtube Playlist 🎶 | Lo-Fi Rock"]="https://youtube.com/playlist?list=PLL3BWakT7rqX3at7Sot-9ZynNqK9LBThu&si=hRm9XKdjl3BwsjuY"
+  ["Youtube Playlist 🎶 | StarWars Epic Music"]="https://youtube.com/playlist?list=PL9PLUrw0CbcTK97xwPGVLs8EcZUIap54v&si=7zui6nEWBnoHIX5W"
+  ["Youtube Playlist 🎶 | Gaming Music"]="https://youtube.com/playlist?list=PLL3BWakT7rqXF3T_LYfLBn0tyQcpeARzb&si=f_I7QftTzS8EL7KG"
+  ["Youtube Playlist 🎶 | Back To The 80s - Thanatos Mixes"]="https://youtube.com/playlist?list=PL_MHjKxnHz1vGIan1NvtfR1NLMk3qkG8j&si=_Pif0WAu6oGP3Tn-"
+
 )
 
 # Populate local_music array with files from music directory and subdirectories
