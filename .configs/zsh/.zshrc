@@ -27,7 +27,11 @@ export PATH="$PATH:/home/ncasatti/.lmstudio/bin"
 # ====================
 # = OH-MY-ZSH CONFIGURATION
 # ====================
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="nanotech"
+#ZSH_THEME="spaceship"
+
 plugins=(git aliases archlinux branch github zsh-syntax-highlighting zsh-completions zsh-interactive-cd zsh-navigation-tools colored-man-pages)
 source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
@@ -227,6 +231,7 @@ alias rl3="rclone ls --max-depth=3"
 alias obsidian-push='rclone sync ~/Documents/ObsidianVault gd:Docs/ObsidianVault -P'
 alias obsidian-get='rclone sync gd:Docs/ObsidianVault ~/Documents/ObsidianVault -P'
 alias obsidian-sync='rclone bisync ~/Documents/ObsidianVault gd:Docs/ObsidianVault -P'
+alias obsidian-resync='rclone bisync ~/Documents/ObsidianVault gd:Docs/ObsidianVault -P --resync'
 
 # Wormhole
 alias whs='wormhole send'
@@ -242,6 +247,7 @@ alias traceme='traceroute github.com'
 alias x="exit"
 alias kk="~/.config/.remap.sh"
 alias ks="~/Temp/KeySound/keySound.sh"
+alias myip="curl -s https://api.ipify.org"
 
 # ====================
 # = COMPLETIONS & SOURCING

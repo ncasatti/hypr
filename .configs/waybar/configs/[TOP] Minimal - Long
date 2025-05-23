@@ -1,45 +1,41 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-
 // ### Minimal - Long ### //
-
 {
-"include": [
-  "$HOME/.config/waybar/Modules",
-  "$HOME/.config/waybar/ModulesWorkspaces",
-  "$HOME/.config/waybar/ModulesCustom",
-  "$HOME/.config/waybar/ModulesGroups",
-  "$HOME/.config/waybar/UserModules",
-  ],
-"layer": "top",
-"mode": "dock",
-"exclusive": true,
-"passthrough": false,
-"position": "top",
-"spacing": 4,
-"fixed-center": true,
-"ipc": true,
-"margin-top": 0,
-"margin-left": 0,
-"margin-right": 0,
-
-"modules-left": [
-	"custom/separator#blank_2",
-	"tray",
-	"custom/separator#blank_2",
-	"mpris",
-	"group/notify",
+	"include": [
+		"$HOME/.config/waybar/Modules",
+		"$HOME/.config/waybar/ModulesWorkspaces",
+		"$HOME/.config/waybar/ModulesCustom",
+		"$HOME/.config/waybar/ModulesGroups",
+		"$HOME/.config/waybar/UserModules",
 	],
-"modules-center": [
-	"hyprland/workspaces#rw",
+	"layer": "top",
+	"mode": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "top",
+	"spacing": 4,
+	"fixed-center": true,
+	"ipc": true,
+	"margin-top": 0,
+	"margin-left": 0,
+	"margin-right": 0,
+	"modules-left": [
+		"custom/separator#blank_2",
+		"tray",
+		"custom/separator#blank_2",
+		"mpris",
+		"group/notify",
 	],
-"modules-right": [
-	"clock",
-	"custom/separator#blank_2",
-	"group/mobo_drawer",
-	"custom/separator#blank_2",
-	"group/audio",
-	"custom/separator#blank_2",
-	"custom/power",
+	"modules-center": [
+		"hyprland/workspaces#rw",
 	],
-
+	"modules-right": [
+		"clock",
+		"custom/separator#blank_2",
+		"group/mobo_drawer",
+		"custom/separator#blank_2",
+		"group/audio",
+		"custom/separator#blank_2",
+		"custom/power",
+	],
 }

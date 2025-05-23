@@ -1,5 +1,5 @@
 #!/bin/bash
-source "$HOME/.config/hypr/wallust/colors-bash.sh"
+source "$HOME/.cache/wallust/colors-bash.sh"
 
 function random_hex() {
     random_hex=("0xff$(openssl rand -hex 3)")

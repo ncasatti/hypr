@@ -70,7 +70,7 @@ main() {
   if [[ "$choice" == "$RANDOM_PIC_NAME" ]]; then
     swww img -o "$focused_monitor" "$RANDOM_PIC" $SWWW_PARAMS
     "$SCRIPTSDIR/theme/wallpaper-colors.sh"
-    "$SCRIPTSDIR/settings/refresh.sh"
+    "$SCRIPTSDIR/system/refresh.sh"
     exit 0
   fi
 
@@ -100,6 +100,11 @@ fi
 
 main
 
+notify-send "Wallpaper changed"
+
+notify-send "Getting wallpaper colors"
 "$SCRIPTSDIR/theme/wallpaper-colors.sh"
 
-"$SCRIPTSDIR/settings/refresh.sh"
+"$SCRIPTSDIR/system/refresh.sh"
+notify-send "Done..."
+
