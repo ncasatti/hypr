@@ -130,6 +130,8 @@ main() {
   # TODO
 
   # ? Done Main
+
+  # * Done
   # create_zsh_link
   # create_kitty_link
   # create_wallust_link
