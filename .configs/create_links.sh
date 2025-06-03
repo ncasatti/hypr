@@ -18,9 +18,6 @@ GTK4_CONFIGS_LOCAL="$HYPR_CONFIGS/gtk-4.0"
 HYPRSHADE_CONFIGS="/usr/share/hyprshade"
 HYPRSHADE_CONFIGS_LOCAL="$HYPR_CONFIGS/hyprshade"
 
-#keyd
-KEYD_CONFIGS="/etc/keyd"
-KEYD_CONFIGS_LOCAL="$HYPR_CONFIGS/keyd"
 
 #kitty
 create_kitty_link() {
@@ -123,6 +120,26 @@ create_zsh_link() {
 
 }
 
+#keyd
+create_keyd_link() {
+  KEYD_CONFIGS="/etc/keyd"
+  KEYD_CONFIGS_LOCAL="$HYPR_CONFIGS/keyd"
+
+  if ! sudo mv "$KEYD_CONFIGS" "$KEYD_CONFIGS-$CURRENT_DATE"; then
+    echo "Error: Could not move $KEYD_CONFIGS" >&2
+    exit 1
+  fi
+
+  if ! sudo ln -s "$KEYD_CONFIGS_LOCAL/rofi" "$KEYD_CONFIGS"; then
+    echo "Error: Could not create symlink for $KEYD_CONFIGS" >&2
+    exit 1
+  fi
+
+  echo "Keyd symlinks created successfully"
+}
+
+
+
 # TODO: Sincronizar carpetas sensibles y encriptarlas para que no sean accesibles en el repositorio.
 
 main() {
@@ -130,6 +147,9 @@ main() {
   # TODO
 
   # ? Done Main
+
+  # ? Done Notebook
+  create_keyd_link
 
   # * Done
   # create_zsh_link
