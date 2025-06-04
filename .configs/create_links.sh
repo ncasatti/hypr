@@ -14,11 +14,6 @@ GTK3_CONFIGS_LOCAL="$HYPR_CONFIGS/gtk-3.0"
 GTK4_CONFIGS="$HOME/.config/gtk-4.0"
 GTK4_CONFIGS_LOCAL="$HYPR_CONFIGS/gtk-4.0"
 
-#hyprshade
-HYPRSHADE_CONFIGS="/usr/share/hyprshade"
-HYPRSHADE_CONFIGS_LOCAL="$HYPR_CONFIGS/hyprshade"
-
-
 #kitty
 create_kitty_link() {
 
@@ -130,7 +125,7 @@ create_keyd_link() {
     exit 1
   fi
 
-  if ! sudo ln -s "$KEYD_CONFIGS_LOCAL/rofi" "$KEYD_CONFIGS"; then
+  if ! sudo ln -s "$KEYD_CONFIGS_LOCAL" "$KEYD_CONFIGS"; then
     echo "Error: Could not create symlink for $KEYD_CONFIGS" >&2
     exit 1
   fi
@@ -138,7 +133,24 @@ create_keyd_link() {
   echo "Keyd symlinks created successfully"
 }
 
+#hyprshade
+create_hyprshade_link() {
 
+  local HYPRSHADE_CONFIGS="/usr/share/hyprshade"
+  local HYPRSHADE_CONFIGS_LOCAL="$HYPR_CONFIGS/hyprshade"
+
+  if ! sudo mv "$HYPRSHADE_CONFIGS" "$HYPRSHADE_CONFIGS-$CURRENT_DATE"; then
+    echo "Error: Could not move $HYPRSHADE_CONFIGS" >&2
+    exit 1
+  fi
+
+  if ! sudo ln -s "$HYPRSHADE_CONFIGS_LOCAL" "$HYPRSHADE_CONFIGS"; then
+    echo "Error: Could not create symlink for $HYPRSHADE_CONFIGS" >&2
+    exit 1
+  fi
+
+  echo "Hyprshade symlinks created successfully"
+}
 
 # TODO: Sincronizar carpetas sensibles y encriptarlas para que no sean accesibles en el repositorio.
 
@@ -149,7 +161,8 @@ main() {
   # ? Done Main
 
   # ? Done Notebook
-  create_keyd_link
+  # create_keyd_link
+  # create_hyprshade_link
 
   # * Done
   # create_zsh_link
