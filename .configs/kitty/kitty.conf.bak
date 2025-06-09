@@ -1,17 +1,14 @@
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 
 # wallust-colors
-# include kitty-colors.conf
+#include kitty-colors.conf
 
-# BEGIN_KITTY_FONTS
-# font_family Cascadia Code Light
-font_family      family="Fira Code"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-font_size 9.4
-# END_KITTY_FONTS
-
+# font_family FantasqueSansM Nerd Font Mono Bold
+font_family Cascadia Code Light
+font_size 9.6
+#bold_font auto
+#italic_font auto
+#bold_italic_font auto
 
 background_opacity 0.8
 dynamic_background_opacity 1
@@ -37,5 +34,3 @@ cursor #dddddd
 
 # For ssh fix
 term xterm-256color
-
-

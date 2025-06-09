@@ -8,7 +8,7 @@
 @define-color bgcolor #222436;  /* background color */
 @define-color alert   #df3320;
 
-@define-color accent1 #ff7a93;
+@define-color accent1 #00ffea;
 @define-color accent2 #b9f27c;
 @define-color accent3 #ff9e64;
 @define-color accent4 #bb9af7;
@@ -20,7 +20,7 @@ font-family: "JetBrainsMono Nerd Font";
 /* font-weight: bold; */
 min-height: 0;
 /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-font-size: 95%;
+font-size: 9px;
 font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
@@ -37,6 +37,7 @@ window#waybar.hidden {
 }
 
 tooltip {
+    color: #00ffea;
     background: #1e1e2e;
     opacity: 0.6;
     border-radius: 10px;
@@ -139,7 +140,7 @@ tooltip {
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,

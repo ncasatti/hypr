@@ -111,9 +111,9 @@
 		"8":"Otto",
 		"9":"Nove",
 		"10":"Dieci"
-	}	
+	}
   },
-  
+
 //  NUMBERS and ICONS style
 "hyprland/workspaces#4": {
 	// "format": "{name}",
@@ -165,7 +165,7 @@
 		"10": "10"
 	}
 },
-// NUMBERS and ICONS style with window rewrite 
+// NUMBERS and ICONS style with window rewrite
 // Icons in: https://www.nerdfonts.com/cheat-sheet
 "hyprland/workspaces#rw": {
 	"disable-scroll": true,
@@ -177,13 +177,15 @@
 	"on-scroll-up": "hyprctl dispatch workspace e+1",
 	"on-scroll-down": "hyprctl dispatch workspace e-1",
 	"persistent-workspaces": {
-		"*": 5
+		"*": 10
 		},
 	"format": "{icon} {windows}",
 	"format-window-separator": " ",
 	"window-rewrite-default": "󰘔 ",
 	"window-rewrite": {
 		"class<VSCode|code-url-handler|code-oss|codium|codium-url-handler|VSCodium>": " ",
+		"class<windsurf>": " ",
+		"class<obsidian>": " ",
 		"class<cursor|cursor-url-handler>": " ",
 		"class<kitty|konsole>": " ",
 		"class<kitty-dropterm>": " ",
@@ -196,7 +198,6 @@
 		"class<tidal-hifi>": " ",
 		"class<DBeaver>": " ",
 		"class<jetbrains-studio": " ",
-
 		"title<.*youtube.*>": " ",
 		"title<.*amazon.*>": " ",
 		"title<.*reddit.*>": " ",
