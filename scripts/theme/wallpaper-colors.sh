@@ -16,12 +16,13 @@ current_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{pri
 echo $current_monitor
 # Construct the full path to the cache file
 cache_file="$cache_dir$current_monitor"
-echo $cache_file
+echo "Cache file: $cache_file"
 # Check if the cache file exists for the current monitor output
 if [ -f "$cache_file" ]; then
     # Get the wallpaper path from the cache file
-    wallpaper_path=$(cat "$cache_file")
-    echo $wallpaper_path
+    # wallpaper_path=$(cat "$cache_file")
+    wallpaper_path=$(swww query | sed -n 's/.*image: //p' | tail -n 1)
+    echo "Wallpaper path: $wallpaper_path"
     # symlink the wallpaper to the location Rofi can access
     if ln -sf "$wallpaper_path" "$HOME/.config/rofi/.current_wallpaper"; then
         ln_success=true  # Set the flag to true upon successful execution

@@ -29,5 +29,5 @@ swww img -o $focused_monitor $RANDOMPIC $SWWW_PARAMS
 wallust run $RANDOMPIC -s &
 
 ${scripts_dir}/theme/wallpaper-colors.sh
-${scripts_dir}/settings/refresh-no-waybar.sh 
+${scripts_dir}/settings/refresh-no-waybar.sh
 
