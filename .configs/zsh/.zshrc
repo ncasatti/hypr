@@ -33,7 +33,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 #ZSH_THEME="frontcube"
 #ZSH_THEME="spaceship"
 
-plugins=(git aliases archlinux branch github zsh-syntax-highlighting zsh-completions zsh-interactive-cd zsh-navigation-tools colored-man-pages)
+plugins=(git aliases archlinux branch github zsh-syntax-highlighting zsh-completions zsh-interactive-cd zsh-navigation-tools colored-man-pages tmux)
 source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
 

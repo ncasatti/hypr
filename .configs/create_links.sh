@@ -117,8 +117,9 @@ create_zsh_link() {
 
 #keyd
 create_keyd_link() {
-  KEYD_CONFIGS="/etc/keyd"
-  KEYD_CONFIGS_LOCAL="$HYPR_CONFIGS/keyd"
+
+  local KEYD_CONFIGS="/etc/keyd"
+  local KEYD_CONFIGS_LOCAL="$HYPR_CONFIGS/keyd"
 
   if ! sudo mv "$KEYD_CONFIGS" "$KEYD_CONFIGS-$CURRENT_DATE"; then
     echo "Error: Could not move $KEYD_CONFIGS" >&2
@@ -159,9 +160,9 @@ main() {
   # TODO
 
   # ? Done Main
+  # create_keyd_link
 
   # ? Done Notebook
-  # create_keyd_link
   # create_hyprshade_link
 
   # * Done

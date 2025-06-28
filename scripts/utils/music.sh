@@ -14,7 +14,7 @@ declare -A online_music=(
   ["Radio 📻 | Shopping Classics 96.1"]="https://stream4.suenas.net/shoppingclassics"
   ["Radio 📻 | Aspen 93.7"]="https://sslstream.online:7001/stream"
   ["Radio 📻 | Rock And Pop 95.9"]="https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOPAAC_SC"
-  ["Youtube Radio 🎧 | RetroWave Radio - ThePrimeThanatos"]="https://youtu.be/niif4go9sxE"
+  ["Youtube Radio 🎧 | RetroWave Radio - ThePrimeThanatos"]="https://youtu.be/8VwZ7xeL4-I"
   ["Youtube Radio 🎧 | Synthwave Radio - Lofi Girl"]="https://youtu.be/4xDzrJKXOOY"
   ["Youtube Radio 🎧 | Synthwave and Chillwave Radio"]="https://youtu.be/W-1azuktk9U"
   ["Youtube Playlist 🎶 | RetroWave"]="https://youtube.com/playlist?list=PLL3BWakT7rqX86diD3PgBkY1cBncKFfnT&si=scxgSiiUk-DJsvRa"
@@ -23,6 +23,7 @@ declare -A online_music=(
   ["Youtube Playlist 🎶 | StarWars Epic Music"]="https://youtube.com/playlist?list=PL9PLUrw0CbcTK97xwPGVLs8EcZUIap54v&si=7zui6nEWBnoHIX5W"
   ["Youtube Playlist 🎶 | Gaming Music"]="https://youtube.com/playlist?list=PLL3BWakT7rqXF3T_LYfLBn0tyQcpeARzb&si=f_I7QftTzS8EL7KG"
   ["Youtube Playlist 🎶 | Back To The 80s - Thanatos Mixes"]="https://youtube.com/playlist?list=PL_MHjKxnHz1vGIan1NvtfR1NLMk3qkG8j&si=_Pif0WAu6oGP3Tn-"
+  ["Youtube Playlist 🎶 | Symphonic Metal"]="https://youtube.com/playlist?list=PL_MHjKxnHz1vGIan1NvtfR1NLMk3qkG8j&si=_Pif0WAu6oGP3Tn-"
 
 )
 
