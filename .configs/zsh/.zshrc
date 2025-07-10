@@ -24,6 +24,12 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:$HOME/.local/share/Uts/.sdk/flutter-sdk3/bin"
 export PATH="$PATH:/home/ncasatti/.lmstudio/bin"
 
+# Tmux Configs
+export ZSH_TMUX_AUTOSTART_ONCE=true
+export ZSH_TMUX_AUTOCONNECT=false
+export ZSH_TMUX_AUTOQUIT=false
+export ZSH_TMUX_AUTONAME_SESSION=true
+
 # ====================
 # = OH-MY-ZSH CONFIGURATION
 # ====================
@@ -249,6 +255,7 @@ alias x="exit"
 alias kk="~/.config/.remap.sh"
 alias ks="~/Temp/KeySound/keySound.sh"
 alias myip="curl -s https://api.ipify.org"
+alias t="tmux"
 
 # ====================
 # = COMPLETIONS & SOURCING
@@ -267,3 +274,5 @@ compdef _cfpack_yargs_completions cfpack
 # Source additional configurations
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(zoxide init zsh)"
+
+alias claude="/home/ncasatti/.claude/local/claude"
