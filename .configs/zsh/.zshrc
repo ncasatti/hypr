@@ -176,6 +176,7 @@ alias penv2='source ~/Documents/Development/Python/.venv/research-corteva-cba36/
 alias penv-aws='source ~/Documents/Development/Python/.venv/aws/bin/activate'
 alias enva='source .venv/bin/activate'
 alias pym='python manage.py'
+alias p='python'
 
 # AWS
 alias aws-cloudf='aws cloudformation'
@@ -256,6 +257,7 @@ alias kk="~/.config/.remap.sh"
 alias ks="~/Temp/KeySound/keySound.sh"
 alias myip="curl -s https://api.ipify.org"
 alias t="tmux"
+alias k="python ~/.config/konfig/konfig-manager/manager.py"
 
 # ====================
 # = COMPLETIONS & SOURCING
